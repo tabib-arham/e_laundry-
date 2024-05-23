@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- <link rel="stylesheet" href="../style1.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <form id="registrationForm" onsubmit="return validateForm()" action="index.html" method="post">
+        <div class="loginForm" >
+            <h1>Log in</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div class="btn ">
+                <button class="form-Button"><a href="dashboard.html">Log in</a></button>
+            </div>
+            <div class="register">
+                <p>Don't have an account?</p> <b><a href="register.html">Register</a></b>
+            </div>
+        </div>
+    
+
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById('Username').value;
+            var password = document.getElementById('Password').value;
+
+            if (username === '' || password === '') {
+                alert('Please enter both username and password.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>
